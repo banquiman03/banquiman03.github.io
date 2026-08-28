@@ -4667,7 +4667,16 @@ h6 {
   transform: scale(1);
 }
 
-.portfolio-project:hover .portfolio-project-open-arrow {
+.portfolio-project[data-category="dev"]:hover
+.portfolio-project-open-arrow,
+.portfolio-project[data-category="email"]:hover
+.portfolio-project-open-arrow,
+.portfolio-project[data-category="dev"]
+.portfolio-project-link:focus-visible
+.portfolio-project-open-arrow,
+.portfolio-project[data-category="email"]
+.portfolio-project-link:focus-visible
+.portfolio-project-open-arrow {
   animation: portfolioOpenArrowMove 0.95s ease-in-out infinite;
 }
 
@@ -4796,44 +4805,61 @@ h6 {
   stroke-linejoin: round;
   transform-box: fill-box;
   transform-origin: center;
-  transition:
-    color 0.22s ease,
-    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.portfolio-project:hover
+.portfolio-design-trigger:hover
 .portfolio-project-preview-icon,
 .portfolio-design-trigger:focus-visible
 .portfolio-project-preview-icon {
   color: var(--accent-color);
 }
 
-.portfolio-project:hover
+@keyframes previewArrowTopLeft {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-5px, -5px); }
+}
+
+@keyframes previewArrowTopRight {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -5px); }
+}
+
+@keyframes previewArrowBottomLeft {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-5px, 5px); }
+}
+
+@keyframes previewArrowBottomRight {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, 5px); }
+}
+
+.portfolio-design-trigger:hover
 .preview-arrow-top-left,
 .portfolio-design-trigger:focus-visible
 .preview-arrow-top-left {
-  transform: translate(-3px, -3px);
+  animation: previewArrowTopLeft 0.9s ease-in-out infinite;
 }
 
-.portfolio-project:hover
+.portfolio-design-trigger:hover
 .preview-arrow-top-right,
 .portfolio-design-trigger:focus-visible
 .preview-arrow-top-right {
-  transform: translate(3px, -3px);
+  animation: previewArrowTopRight 0.9s ease-in-out infinite;
 }
 
-.portfolio-project:hover
+.portfolio-design-trigger:hover
 .preview-arrow-bottom-left,
 .portfolio-design-trigger:focus-visible
 .preview-arrow-bottom-left {
-  transform: translate(-3px, 3px);
+  animation: previewArrowBottomLeft 0.9s ease-in-out infinite;
 }
 
-.portfolio-project:hover
+.portfolio-design-trigger:hover
 .preview-arrow-bottom-right,
 .portfolio-design-trigger:focus-visible
 .preview-arrow-bottom-right {
-  transform: translate(3px, 3px);
+  animation: previewArrowBottomRight 0.9s ease-in-out infinite;
 }
 
 .portfolio-design-modal {
@@ -5263,8 +5289,8 @@ h6 {
 
 
 @media (prefers-reduced-motion: reduce) {
-  .portfolio-project-preview-icon .preview-arrow {
-    transition: color 0.22s ease;
-    transform: none !important;
+  .portfolio-design-trigger:hover .preview-arrow,
+  .portfolio-design-trigger:focus-visible .preview-arrow {
+    animation: none;
   }
 }

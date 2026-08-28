@@ -1541,6 +1541,253 @@ function initializePortfolioFilters() {
 }
 
 
+
+
+/* ==================================================
+   CONTACT FORM
+================================================== */
+
+function initializeContactForm() {
+
+  const form =
+    document.querySelector(
+      '.contact-form'
+    );
+
+
+  if (
+    !form ||
+    form.dataset.formInitialized === 'true'
+  ) {
+
+    return;
+
+  }
+
+
+  form.dataset.formInitialized =
+    'true';
+
+
+  const submitButton =
+    form.querySelector(
+      '.contact-submit-button'
+    );
+
+
+  const submitText =
+    submitButton?.querySelector(
+      'span'
+    );
+
+
+  const submitIcon =
+    submitButton?.querySelector(
+      'i'
+    );
+
+
+  const statusMessage =
+    form.querySelector(
+      '.contact-form-status'
+    );
+
+
+  function setStatus(
+    message,
+    state = ''
+  ) {
+
+    if (
+      !statusMessage
+    ) {
+
+      return;
+
+    }
+
+
+    statusMessage.textContent =
+      message;
+
+
+    statusMessage.classList.remove(
+      'success',
+      'error'
+    );
+
+
+    if (
+      state
+    ) {
+
+      statusMessage.classList.add(
+        state
+      );
+
+    }
+
+  }
+
+
+  function setButtonState(
+    state
+  ) {
+
+    if (
+      !submitButton ||
+      !submitText ||
+      !submitIcon
+    ) {
+
+      return;
+
+    }
+
+
+    if (
+      state === 'sending'
+    ) {
+
+      submitButton.disabled = true;
+      submitText.textContent = 'Sending...';
+
+      submitIcon.className =
+        'bi bi-arrow-repeat contact-submit-spinner';
+
+      return;
+
+    }
+
+
+    if (
+      state === 'success'
+    ) {
+
+      submitButton.disabled = false;
+      submitText.textContent = 'Message Sent';
+
+      submitIcon.className =
+        'bi bi-check-lg';
+
+      return;
+
+    }
+
+
+    submitButton.disabled = false;
+    submitText.textContent = 'Send Message';
+
+    submitIcon.className =
+      'bi bi-arrow-up-right';
+
+  }
+
+
+  form.addEventListener(
+    'submit',
+    async function (event) {
+
+      event.preventDefault();
+
+
+      if (
+        !form.checkValidity()
+      ) {
+
+        form.reportValidity();
+        return;
+
+      }
+
+
+      setButtonState(
+        'sending'
+      );
+
+
+      setStatus(
+        ''
+      );
+
+
+      try {
+
+        const response =
+          await fetch(
+            form.action,
+            {
+              method: 'POST',
+              body: new FormData(form),
+              headers: {
+                Accept: 'application/json'
+              }
+            }
+          );
+
+
+        if (
+          !response.ok
+        ) {
+
+          throw new Error(
+            'Unable to send message.'
+          );
+
+        }
+
+
+        form.reset();
+
+
+        setButtonState(
+          'success'
+        );
+
+
+        setStatus(
+          'Thanks! Your message has been sent successfully.',
+          'success'
+        );
+
+
+        window.setTimeout(
+          function () {
+
+            setButtonState(
+              'default'
+            );
+
+          },
+          3500
+        );
+
+      }
+      catch (error) {
+
+        console.error(
+          error
+        );
+
+
+        setButtonState(
+          'default'
+        );
+
+
+        setStatus(
+          'Sorry, your message could not be sent. Please try again.',
+          'error'
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
 /* ==================================================
    INITIALIZE LOADED PAGE
 ================================================== */
@@ -1628,6 +1875,9 @@ function initializeLoadedPage() {
 
 
   initializePortfolioFilters();
+
+
+  initializeContactForm();
 
 }
 

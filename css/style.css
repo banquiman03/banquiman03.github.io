@@ -5176,3 +5176,47 @@ h6 {
     justify-self: stretch;
   }
 }
+
+/* ==================================================
+   CONTACT FORM STATUS
+================================================== */
+
+.contact-form-status {
+  grid-column: 1 / -1;
+  min-height: 22px;
+  margin: 2px 0 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.contact-form-status.success {
+  color: #9FB0FF;
+}
+
+.contact-form-status.error {
+  color: #FF9B9B;
+}
+
+.contact-submit-button:disabled {
+  cursor: wait;
+  opacity: 0.78;
+}
+
+.contact-submit-spinner {
+  animation: contactSubmitSpin 0.8s linear infinite;
+}
+
+@keyframes contactSubmitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form-status {
+    text-align: left;
+  }
+}
+

@@ -37,19 +37,25 @@ const basePath =
 
 function getPageFromURL() {
 
-  const hashPage =
-    window.location.hash
-      .replace('#', '')
-      .trim();
-
-
   if (
-    routes.includes(
-      hashPage
-    )
+    isLocalDevelopment
   ) {
 
-    return hashPage;
+    const hashPage =
+      window.location.hash
+        .replace('#', '')
+        .trim();
+
+
+    if (
+      routes.includes(
+        hashPage
+      )
+    ) {
+
+      return hashPage;
+
+    }
 
   }
 
@@ -83,6 +89,72 @@ function getPageFromURL() {
 
 
 /* ==================================================
+   BUILD ROUTE URL
+================================================== */
+
+function buildRouteURL(
+  page
+) {
+
+  if (
+    isLocalDevelopment
+  ) {
+
+    return `${basePath}#${page}`;
+
+  }
+
+
+  return `${basePath}${page}`;
+
+}
+
+
+/* ==================================================
+   RESTORE GITHUB PAGES ROUTE
+================================================== */
+
+function restoreGitHubPagesRoute() {
+
+  if (
+    isLocalDevelopment
+  ) {
+
+    return;
+
+  }
+
+
+  const redirectPath =
+    sessionStorage.getItem(
+      'portfolioRedirectPath'
+    );
+
+
+  if (
+    !redirectPath
+  ) {
+
+    return;
+
+  }
+
+
+  sessionStorage.removeItem(
+    'portfolioRedirectPath'
+  );
+
+
+  window.history.replaceState(
+    null,
+    '',
+    redirectPath
+  );
+
+}
+
+
+/* ==================================================
    NORMALIZE NAVIGATION URLS
 ================================================== */
 
@@ -109,7 +181,9 @@ function normalizeNavigationURLs() {
 
         link.setAttribute(
           'href',
-          `${basePath}#${page}`
+          buildRouteURL(
+            page
+          )
         );
 
       }
@@ -268,7 +342,9 @@ async function loadPage(
     ) {
 
       const newURL =
-        `${basePath}#${page}`;
+        buildRouteURL(
+          page
+        );
 
 
       window.history.pushState(
@@ -1560,6 +1636,9 @@ function initializeLoadedPage() {
    INITIAL PAGE LOAD
 ================================================== */
 
+restoreGitHubPagesRoute();
+
+
 normalizeNavigationURLs();
 
 
@@ -1567,24 +1646,31 @@ const initialPage =
   getPageFromURL();
 
 
-const currentHashPage =
-  window.location.hash
-    .replace('#', '')
-    .trim();
+const currentRoute =
+  isLocalDevelopment
+    ? window.location.hash
+        .replace('#', '')
+        .trim()
+    : window.location.pathname
+        .split('/')
+        .filter(Boolean)
+        .pop();
 
 
 if (
   !routes.includes(
-    currentHashPage
+    currentRoute
   )
 ) {
 
   window.history.replaceState(
     {
-      page: initialPage
+      page: 'about'
     },
     '',
-    `${basePath}#${initialPage}`
+    buildRouteURL(
+      'about'
+    )
   );
 
 }

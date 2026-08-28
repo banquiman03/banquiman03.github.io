@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    (function () {
+      const routes = [
+        'about',
+        'resume',
+        'portfolio',
+        'contact'
+      ];
+
+      const parts =
+        window.location.pathname
+          .split('/')
+          .filter(Boolean);
+
+      const page =
+        parts[
+          parts.length - 1
+        ];
+
+      if (
+        routes.includes(
+          page
+        )
+      ) {
+        sessionStorage.setItem(
+          'portfolioRedirectPath',
+          window.location.pathname +
+          window.location.search +
+          window.location.hash
+        );
+
+        window.location.replace('/');
+      }
+    }());
+  </script>
+
+  <main>
+    <h1>Page not found</h1>
+    <p>The page you requested does not exist.</p>
+    <p><a href="/about">Return to the portfolio</a></p>
+  </main>
+</body>
+</html>

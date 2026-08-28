@@ -4782,19 +4782,58 @@ h6 {
 }
 
 .portfolio-project-preview-icon {
+  width: 46px;
+  height: 46px;
+  overflow: visible;
   color: #FFFFFF;
-  font-size: 42px;
-  line-height: 1;
-  transform: scale(0.9);
+}
+
+.portfolio-project-preview-icon .preview-arrow {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-box: fill-box;
+  transform-origin: center;
   transition:
     color 0.22s ease,
-    transform 0.22s ease;
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .portfolio-project:hover
+.portfolio-project-preview-icon,
+.portfolio-design-trigger:focus-visible
 .portfolio-project-preview-icon {
   color: var(--accent-color);
-  transform: scale(1);
+}
+
+.portfolio-project:hover
+.preview-arrow-top-left,
+.portfolio-design-trigger:focus-visible
+.preview-arrow-top-left {
+  transform: translate(-3px, -3px);
+}
+
+.portfolio-project:hover
+.preview-arrow-top-right,
+.portfolio-design-trigger:focus-visible
+.preview-arrow-top-right {
+  transform: translate(3px, -3px);
+}
+
+.portfolio-project:hover
+.preview-arrow-bottom-left,
+.portfolio-design-trigger:focus-visible
+.preview-arrow-bottom-left {
+  transform: translate(-3px, 3px);
+}
+
+.portfolio-project:hover
+.preview-arrow-bottom-right,
+.portfolio-design-trigger:focus-visible
+.preview-arrow-bottom-right {
+  transform: translate(3px, 3px);
 }
 
 .portfolio-design-modal {
@@ -4910,7 +4949,8 @@ h6 {
   }
 
   .portfolio-project-preview-icon {
-    font-size: 36px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -5220,3 +5260,11 @@ h6 {
   }
 }
 
+
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-project-preview-icon .preview-arrow {
+    transition: color 0.22s ease;
+    transform: none !important;
+  }
+}

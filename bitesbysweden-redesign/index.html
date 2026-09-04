@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bites by Sweden</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Great+Vibes&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body id="top">
+  <!-- Transparent Header -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#" aria-label="Bites by Sweden home">
+          <img
+            src="assets/images/logo.png"
+            alt="Bites by Sweden"
+            class="brand-logo"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#flavors">FLAVORS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT US</a>
+            </li>
+          </ul>
+
+          <a href="product.html" class="btn solid-cta header-order-btn d-none d-lg-inline-flex align-items-center gap-2">
+            ORDER ONLINE
+            <i class="bi bi-bag-heart"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content-wrap">
+      <div class="row">
+        <div class="col-lg-7 col-xl-6">
+          <div class="hero-copy">
+
+            <h1 class="hero-title">
+              Scandinavian Candy
+            </h1>
+
+            <div class="hero-script">
+              Crafted with purity, love, and joy!
+            </div>
+
+            <p class="hero-description">
+              The future of candy is better-for-you. And it’s Swedish.<br>
+              All the joy, none of the junk. 100% Swedish. 100% Better-for-You.
+            </p>
+
+            <div class="hero-actions">
+              <a href="product.html" class="btn solid-cta hero-btn hero-btn-primary">
+                ORDER NOW
+                <i class="bi bi-bag-heart"></i>
+              </a>
+
+              <a href="#flavors" class="btn hero-btn hero-secondary-cta">
+                EXPLORE FLAVORS
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="hero-mini-benefits" aria-label="Product highlights">
+              <div class="hero-mini-benefit">
+                <img src="assets/icons/pocket-convenient-white.svg" alt="" aria-hidden="true" />
+                <span>Pocket-sized convenience</span>
+              </div>
+
+              <div class="hero-mini-benefit">
+                <img src="assets/icons/strawberry-white.svg" alt="" aria-hidden="true" />
+                <span>All natural flavors</span>
+              </div>
+
+              <div class="hero-mini-benefit">
+                <img src="assets/icons/low-calorie-sugar-white.svg" alt="" aria-hidden="true" />
+                <span>Low calorie &amp; sugar</span>
+              </div>
+
+              <div class="hero-mini-benefit">
+                <img src="assets/icons/cheers-glasses-white.svg" alt="" aria-hidden="true" />
+                <span>Affordable for everyone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Benefit Strip -->
+  <section class="benefit-strip-section" aria-label="Product benefits">
+    <div class="container">
+      <div class="benefit-strip">
+        <div class="row g-0">
+          <div class="col-lg-4 benefit-item">
+            <div class="benefit-icon" aria-hidden="true">
+              <img src="assets/icons/non-gmo-leaves.svg" alt="" />
+            </div>
+            <p class="benefit-text">
+              Made with 100% Non-GMO ingredients
+            </p>
+          </div>
+
+          <div class="col-lg-4 benefit-item">
+            <div class="benefit-icon" aria-hidden="true">
+              <img src="assets/icons/no-artificial-corn.svg" alt="" />
+            </div>
+            <p class="benefit-text">
+              Zero Red 40, artificial dyes, and high-fructose corn syrup
+            </p>
+          </div>
+
+          <div class="col-lg-4 benefit-item">
+            <div class="benefit-icon" aria-hidden="true">
+              <img src="assets/icons/bold-flavors-gift.svg" alt="" />
+            </div>
+            <p class="benefit-text">
+              Packed with bold, craveable flavors—naturally
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Flavors -->
+  <section class="flavors-section" id="flavors">
+    <div class="container">
+      <div class="flavors-heading-row justify-content-center text-center">
+        <h2 class="flavors-title">Choose Your Flavors</h2>
+      </div>
+
+      <div class="flavor-carousel" data-flavor-carousel>
+        <button
+          class="flavor-carousel-overlay prev"
+          type="button"
+          aria-label="Previous flavor"
+          data-carousel-prev
+        >&lt;</button>
+
+        <div class="flavor-carousel-viewport">
+          <div class="flavor-carousel-track" data-carousel-track>
+            <article class="flavor-card" data-product="jelly-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/jelly-mix.webp"
+                  alt="Jelly Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Jelly Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="sour-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/sour-mix.webp"
+                  alt="Sour Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Sour Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="sweet-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/sweet-mix.webp"
+                  alt="Sweet Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Sweet Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="licorice-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/licorice-mix.webp"
+                  alt="Licorice Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Licorice Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="cola-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/cola-mix.webp"
+                  alt="Cola Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Cola Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="sour-rush-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/sour-rush-mix.webp"
+                  alt="Sour Rush Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Sour Rush Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="mushroom-cloud-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/mushroom-cloud-mix.webp"
+                  alt="Mushroom Cloud Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Mushroom Cloud Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="party-mix">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/party-mix.webp"
+                  alt="Party Mix"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Party Mix</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+            <article class="flavor-card" data-product="variety-pack">
+              <div class="flavor-card-image-wrap">
+                <img
+                  class="flavor-card-image"
+                  src="assets/images/flavors/variety-pack-of-12.webp"
+                  alt="Variety Pack of 12"
+                  loading="lazy"
+                />
+              </div>
+              <div class="flavor-card-body">
+                <h3 class="flavor-card-title">Variety Pack of 12</h3>
+                <a href="product.html" class="btn solid-cta flavor-card-cta">Order Now</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button
+          class="flavor-carousel-overlay next"
+          type="button"
+          aria-label="Next flavor"
+          data-carousel-next
+        >&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="feature-cards-section" aria-label="Featured Bites by Sweden content">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <article class="feature-card feature-card--flavors">
+            <div class="feature-card-inner">
+              <div class="feature-card-content">
+                <h2 class="feature-card-title">
+                  Grab Happiness - Natural Chewy, Irresistibly Swedish
+                </h2>
+
+                <a href="#flavors" class="btn solid-cta hero-btn">
+                  VIEW ALL FLAVORS
+                </a>
+              </div>
+
+              <div class="feature-card-media" aria-hidden="true"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-6">
+          <article class="feature-card feature-card--retailers">
+            <div class="feature-card-inner">
+              <div class="feature-card-content">
+                <h2 class="feature-card-title feature-card-title-sm">
+                  Why Retailers Love Bites by Sweden
+                </h2>
+
+                <p class="feature-card-text">
+                  <strong>High Repeat Purchase Rates:</strong>
+                  Shoppers love our mix of indulgence and integrity.
+                  <strong>Retail-Ready Packaging:</strong>
+                  Vibrant, resealable, and shelf-dominating designs made for today’s candy aisle.
+                </p>
+
+                <a href="#top" class="btn hero-btn feature-card-pink-cta">
+                  LEARN MORE
+                </a>
+              </div>
+
+              <div class="feature-card-media" aria-hidden="true"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Feedback -->
+  <section class="feedback-section" aria-label="Customer feedback">
+    <div class="container">
+      <h2 class="feedback-heading">Our Customers Feedback</h2>
+
+      <div class="feedback-carousel" data-feedback-carousel>
+        <div class="feedback-track" data-feedback-track>
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“Love at first bite!”</h3>
+            <p class="feedback-text">Bold flavors, clean ingredients, perfectly chewy <strong>—</strong> My new favorite treat!</p>
+            <div class="feedback-author"><p class="feedback-name">-Lisa T.</p></div>
+          </article>
+
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“Exactly What I’ve Been Craving”</h3>
+            <p class="feedback-text">Exactly What I've Been Craving - Clean, Addictive, And Authentic!</p>
+            <div class="feedback-author"><p class="feedback-name">-Chrissy B.</p></div>
+          </article>
+
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“Chewy, Soft &amp; Full of Flavor”</h3>
+            <p class="feedback-text">I Grabbed A Few Pouches For My Kids, But I Ended Up Stealing Most Of The Foamy &amp; Jelly Mix Myself! The Texture Is Chewy, Soft, And The Flavors Pop Without Being Overly Sugary.</p>
+            <div class="feedback-author"><p class="feedback-name">-Ava B.</p></div>
+          </article>
+
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“Love at first bite!”</h3>
+            <p class="feedback-text">Bold flavors, clean ingredients, perfectly chewy <strong>—</strong> My new favorite treat!</p>
+            <div class="feedback-author"><p class="feedback-name">-Bettina</p></div>
+          </article>
+
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“A Taste of Stockholm”</h3>
+            <p class="feedback-text">I Grew Up In Stockholm, And Bites By Sweden Took Me Straight Back Home. The Liquorice Mix Is Hands-down The Best I've Had In The Us, And That's Saying Something.</p>
+            <div class="feedback-author"><p class="feedback-name">-John B.</p></div>
+          </article>
+
+          <article class="feedback-card">
+            <div class="feedback-stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <h3 class="feedback-title">“Love at first bite!”</h3>
+            <p class="feedback-text">Bold flavors, clean ingredients, perfectly chewy <strong>—</strong> My new favorite treat!</p>
+            <div class="feedback-author"><p class="feedback-name">-Alex</p></div>
+          </article>
+</div>
+      </div>
+
+      <div class="feedback-dots" aria-label="Customer feedback slides">
+        <button class="feedback-dot active" type="button" aria-label="Feedback 1" data-feedback-dot="0"></button>
+        <button class="feedback-dot" type="button" aria-label="Feedback 2" data-feedback-dot="1"></button>
+        <button class="feedback-dot" type="button" aria-label="Feedback 3" data-feedback-dot="2"></button>
+        <button class="feedback-dot" type="button" aria-label="Feedback 4" data-feedback-dot="3"></button>
+        <button class="feedback-dot" type="button" aria-label="Feedback 5" data-feedback-dot="4"></button>
+        <button class="feedback-dot" type="button" aria-label="Feedback 6" data-feedback-dot="5"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sweden Story Banner -->
+  <section class="sweden-story-section" aria-label="Bites by Sweden story">
+    <div class="container">
+      <div class="sweden-story-banner">
+        <div class="sweden-story-content">
+          <div class="sweden-story-visual sweden-story-bowl" aria-hidden="true">
+            <img src="assets/images/sweden-story-bowl.png" alt="" />
+          </div>
+
+          <div class="sweden-story-copy">
+            <h2 class="sweden-story-title">From the Heart of Sweden</h2>
+
+            <p class="sweden-story-text">
+              Pure Joy, Perfectly Packaged — 100% Swedish. 100% Better for You.
+            </p>
+          </div>
+
+          <a href="product.html" class="btn banner-secondary-cta">
+            ORDER NOW
+            <i class="bi bi-bag-heart"></i>
+          </a>
+
+          <div class="sweden-story-visual sweden-story-woman" aria-hidden="true">
+            <img src="assets/images/sweden-story-woman.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-tablet-stack footer-tablet-stack--left">
+<div class="footer-brand footer-tablet-brand">
+          <div class="footer-brand-inner">
+            <a href="#" aria-label="Bites by Sweden home">
+              <img src="assets/images/reverse-logo.png" alt="Bites by Sweden" />
+            </a>
+
+            <div class="footer-socials" aria-label="Social media">
+              <a class="footer-social-link" href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a class="footer-social-link" href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a class="footer-social-link" href="#" aria-label="TikTok">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+<div class="footer-tablet-service">
+          <h2 class="footer-heading">Customer Service</h2>
+          <ul class="footer-links">
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Returns &amp; Refunds</a></li>
+            <li><a href="#">Terms &amp; Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        </div>
+        <div class="footer-tablet-stack footer-tablet-stack--right">
+<div class="footer-tablet-flavors">
+          <h2 class="footer-heading">Flavors</h2>
+          <ul class="footer-links">
+            <li><a href="#flavors">Jelly Mix</a></li>
+            <li><a href="#flavors">Sour Mix</a></li>
+            <li><a href="#flavors">Sweet Mix</a></li>
+            <li><a href="#flavors">Licorice Mix</a></li>
+            <li><a href="#flavors">Cola Mix</a></li>
+            <li><a href="#flavors">Sour Rush Mix</a></li>
+            <li><a href="#flavors">Mushroom Cloud Mix</a></li>
+            <li><a href="#flavors">Party Mix</a></li>
+            <li><a href="#flavors">Variety Pack of 12</a></li>
+          </ul>
+        </div>
+<div class="footer-tablet-newsletter">
+          <h2 class="footer-heading">Stay in The Mix</h2>
+          <p class="footer-newsletter-text">Sign up for exclusive offers and discounts</p>
+
+          <form class="footer-newsletter-form" action="#" method="post">
+            <label class="visually-hidden" for="footer-email">Email address</label>
+            <input
+              id="footer-email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+            <button class="footer-subscribe-btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-copyright">
+      <div class="container">
+        <p>© Bites by Sweden 2026. All Rights Reserved.</p>
+      </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+
+  <a href="#top" class="scroll-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

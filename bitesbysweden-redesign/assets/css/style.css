@@ -2885,8 +2885,9 @@
     text-align: center !important;
   }
 
-  .product-rating {
+  .product-details .product-rating {
     justify-content: center !important;
+    width: 100%;
   }
 
   .product-lead,

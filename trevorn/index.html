@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- TREVORN Project Revision: v1.1.0 | 2026-09-14 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TREVORN | Protein Shakes</title>
+  <meta name="application-version" content="1.1.1">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png?v=1.1.1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.1.1">
+</head>
+<body class="is-loading">
+<div class="site-loader" id="siteLoader" aria-hidden="true">
+  <div class="site-loader__inner">
+    <div class="site-loader__shaker" aria-hidden="true">
+      <span class="site-loader__shaker-lid"></span>
+      <span class="site-loader__shaker-body"></span>
+    </div>
+    <img src="assets/images/RED_Logo01.png" alt="" class="site-loader__logo">
+    <div class="site-loader__track" aria-hidden="true">
+      <span class="site-loader__progress"></span>
+    </div>
+  </div>
+</div>
+<header class="site-header sticky-top">
+    <div class="container-fluid header-shell">
+      <a class="brand" href="#home" aria-label="TREVORN Home">
+        <img src="assets/images/RED_Logo01.png" alt="TREVORN Logo" class="brand-logo">
+      </a>
+
+      <button class="mobile-toggle d-lg-none" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#dark-chocolate" class="nav-link">Dark Chocolate</a>
+        <a href="#vanilla" class="nav-link">Vanilla Wafer</a>
+        <a href="#avocado" class="nav-link">Avocado Ice Cream</a>
+        <a href="#contact" class="nav-link">Contact Us</a>
+        <a href="#buy" class="btn btn-primary-cta header-cta">BUY NOW</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+<section class="hero-section" aria-label="Featured TREVORN flavors">
+      <div id="trevornHero" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="15000" data-bs-pause="false">
+        <div class="carousel-inner">
+
+          <article class="carousel-item active hero-slide">
+            <div class="hero-bg" style="background-image:url('assets/images/hero_image_03.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container-fluid hero-container">
+              <div class="hero-copy col-12 col-md-8 col-lg-6 col-xxl-5">
+                <h3 class="hero-kicker">PERFORMANCE</h3>
+                <h1 class="hero-title">Anytime. Anywhere. Stronger.</h1>
+                <p class="hero-text">Download the TREVORN App to track your training, measure your improvements, and keep your fitness journey moving forward.</p>
+
+                <div class="benefit-grid" aria-label="App tracking benefits">
+                  <div class="benefit-item">
+                    <span class="benefit-icon check-icon" aria-hidden="true"></span>
+                    <span>DAILY GOALS</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon dumbbell-icon" aria-hidden="true"></span>
+                    <span>DAILY WORKOUT</span>
+                  </div>
+                  <div class="benefit-item">
+                    <span class="benefit-icon clock-icon" aria-hidden="true"></span>
+                    <span>TIME SPEND</span>
+                  </div>
+                </div>
+
+                <div class="hero-actions">
+                  <a href="#buy" class="btn btn-primary-cta">DOWNLOAD THE APP</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carousel-item hero-slide">
+            <div class="hero-bg" style="background-image:url('assets/images/hero_image_01.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container-fluid hero-container">
+              <div class="hero-copy col-12 col-md-8 col-lg-6 col-xxl-5">
+                <h3 class="hero-kicker">UNLEASH</h3>
+                <h1 class="hero-title">Strength Starts Here</h1>
+                <p class="hero-text">TREVORN combines extra protein and essential amino acids to support your muscles, recovery, strength, and active lifestyle.</p>
+                <div class="hero-actions">
+                  <a href="#buy" class="btn btn-primary-cta">BUY NOW</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carousel-item hero-slide">
+            <div class="hero-bg" style="background-image:url('assets/images/hero_image_02.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container-fluid hero-container">
+              <div class="hero-copy col-12 col-md-9 col-lg-7 col-xxl-6">
+                <h3 class="hero-kicker">OWN IT</h3>
+                <h1 class="hero-title">Built, Not Given.</h1>
+                <p class="hero-text">Champions are built through discipline and consistency, and TREVORN is with you throughout every step of the journey.</p>
+
+                <div class="hero-actions">
+                  <a href="#buy" class="btn btn-primary-cta">LEARN MORE</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-control-prev hero-arrow hero-arrow-left" type="button" data-bs-target="#trevornHero" data-bs-slide="prev" aria-label="Previous slide">
+          <span class="arrow-mark" aria-hidden="true">&lt;</span>
+        </button>
+        <button class="carousel-control-next hero-arrow hero-arrow-right" type="button" data-bs-target="#trevornHero" data-bs-slide="next" aria-label="Next slide">
+          <span class="arrow-mark" aria-hidden="true">&gt;</span>
+        </button>
+
+        <div class="hero-progress" aria-hidden="true">
+          <span class="hero-progress-fill"></span>
+        </div>
+      </div>
+    </section>
+<section id="dark-chocolate"
+             class="product-showcase product-showcase--chocolate"
+             aria-labelledby="darkChocolateTitle">
+      <div class="product-sticky">
+        <div class="product-gradient" aria-hidden="true"></div>
+
+        <div class="product-scroll-cue" aria-hidden="true">
+          <span class="product-scroll-mouse">
+            <span class="product-scroll-wheel"></span>
+          </span>
+          <span class="product-scroll-label">SCROLL TO EXPLORE</span>
+          <span class="product-scroll-line"></span>
+        </div>
+
+        <div class="product-layer product-layer--base" aria-hidden="true">
+          <img src="assets/images/product_0101.png" alt="" class="product-image product-image--base">
+        </div>
+        <div class="product-layer product-layer--flavor" aria-hidden="true">
+          <img src="assets/images/product_0102.png" alt="" class="product-image product-image--flavor">
+        </div>
+
+        <div class="behavior-effect behavior-effect--melt" aria-hidden="true">
+          <span class="melt-blob melt-blob--1"></span>
+          <span class="melt-blob melt-blob--2"></span>
+          <span class="melt-blob melt-blob--3"></span>
+          <span class="melt-drip melt-drip--1"></span>
+          <span class="melt-drip melt-drip--2"></span>
+          <span class="melt-drip melt-drip--3"></span>
+        </div>
+
+        <div class="product-content container-fluid">
+          <div class="product-copy">
+            <img src="assets/images/RED_Logo01.png" alt="TREVORN" class="product-logo">
+            <h2 id="darkChocolateTitle" class="product-title">Dark Chocolate</h2>
+            <p class="product-description">TREVORN PROTEIN PROVIDES 30 G PROTEIN PER SERVING<span class="desktop-break"><br></span> AND IT'S ASPARATAME FREE.</p>
+            <a href="#buy" class="product-order-cta"><span>ORDER NOW</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="vanilla"
+             class="product-showcase product-showcase--vanilla"
+             aria-labelledby="vanillaTitle">
+      <div class="product-sticky">
+        <div class="product-gradient" aria-hidden="true"></div>
+
+        <div class="product-scroll-cue" aria-hidden="true">
+          <span class="product-scroll-mouse">
+            <span class="product-scroll-wheel"></span>
+          </span>
+          <span class="product-scroll-label">SCROLL TO EXPLORE</span>
+          <span class="product-scroll-line"></span>
+        </div>
+
+        <div class="product-layer product-layer--base" aria-hidden="true">
+          <img src="assets/images/product_0201.png" alt="" class="product-image product-image--base">
+        </div>
+        <div class="product-layer product-layer--flavor" aria-hidden="true">
+          <img src="assets/images/product_0202.png" alt="" class="product-image product-image--flavor">
+        </div>
+
+        <div class="behavior-effect behavior-effect--crunch" aria-hidden="true">
+          <span class="bite bite--1"></span>
+          <span class="bite bite--2"></span>
+          <span class="bite bite--3"></span>
+          <span class="crumb crumb--1"></span>
+          <span class="crumb crumb--2"></span>
+          <span class="crumb crumb--3"></span>
+          <span class="crumb crumb--4"></span>
+          <span class="crumb crumb--5"></span>
+        </div>
+
+        <div class="product-content container-fluid">
+          <div class="product-copy">
+            <img src="assets/images/RED_Logo01.png" alt="TREVORN" class="product-logo">
+            <h2 id="vanillaTitle" class="product-title">Vanilla Wafer</h2>
+            <p class="product-description">TREVORN PROTEIN PROVIDES 30 G PROTEIN PER SERVING<span class="desktop-break"><br></span> AND IT'S ASPARATAME FREE.</p>
+            <a href="#buy" class="product-order-cta"><span>ORDER NOW</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="avocado"
+             class="product-showcase product-showcase--avocado"
+             aria-labelledby="avocadoTitle">
+      <div class="product-sticky">
+        <div class="product-gradient" aria-hidden="true"></div>
+
+        <div class="product-scroll-cue" aria-hidden="true">
+          <span class="product-scroll-mouse">
+            <span class="product-scroll-wheel"></span>
+          </span>
+          <span class="product-scroll-label">SCROLL TO EXPLORE</span>
+          <span class="product-scroll-line"></span>
+        </div>
+
+        <div class="product-layer product-layer--base" aria-hidden="true">
+          <img src="assets/images/product_0301.png" alt="" class="product-image product-image--base">
+        </div>
+        <div class="product-layer product-layer--flavor" aria-hidden="true">
+          <img src="assets/images/product_0302.png" alt="" class="product-image product-image--flavor">
+        </div>
+
+        <div class="behavior-effect behavior-effect--scoop" aria-hidden="true">
+          <span class="scoop-orb scoop-orb--1"></span>
+          <span class="scoop-orb scoop-orb--2"></span>
+          <span class="scoop-orb scoop-orb--3"></span>
+          <span class="scoop-trail"></span>
+        </div>
+
+        <div class="product-content container-fluid">
+          <div class="product-copy">
+            <img src="assets/images/RED_Logo01.png" alt="TREVORN" class="product-logo">
+            <h2 id="avocadoTitle" class="product-title">Avocado Ice Cream</h2>
+            <p class="product-description">TREVORN PROTEIN PROVIDES 30 G PROTEIN PER SERVING<span class="desktop-break"><br></span> AND IT'S ASPARATAME FREE.</p>
+            <a href="#buy" class="product-order-cta"><span>ORDER NOW</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="contact" class="contact-section" aria-labelledby="contactTitle">
+      <div class="container contact-container">
+        <div class="contact-heading">
+          <h2 id="contactTitle">Contact Us</h2>
+          <p>Any questions or remarks? Just write us a message!</p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label for="contactName">Name</label>
+              <input id="contactName" name="name" type="text" placeholder="Enter your full name." autocomplete="name" required>
+            </div>
+
+            <div class="contact-field">
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" name="email" type="email" placeholder="Enter your email." autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="contact-field contact-field--message">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="7" placeholder="Enter your message..." required></textarea>
+          </div>
+
+          <button class="btn btn-primary-cta contact-submit" type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+<footer id="buy" class="site-footer" aria-label="TREVORN footer">
+    <div class="container footer-shell">
+      <div class="footer-grid">
+        <article class="footer-card footer-card--brand">
+          <img src="assets/images/RED_Logo01.png" alt="TREVORN" class="footer-brand-logo">
+        </article>
+
+        <article class="footer-card">
+          <div class="footer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M3 5h18v14H3V5zm2 2v1.1l7 4.5 7-4.5V7H5zm14 10v-6.5l-7 4.5-7-4.5V17h14z"/>
+            </svg>
+          </div>
+          <h3>CONTACT US</h3>
+          <p>Questions about TREVORN? Send us a message using the contact form above.</p>
+        </article>
+
+        <article class="footer-card">
+          <div class="footer-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+            </svg>
+          </div>
+          <h3>OUR STORE</h3>
+          <p>Manila, Metro Manila, Philippines</p>
+        </article>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© TREVORN. ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </footer>
+<button class="scroll-top-control" type="button" aria-label="Scroll to top">
+    <span class="scroll-top-arrow" aria-hidden="true">&gt;</span>
+  </button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="js/script.js?v=1.1.1"></script>
+</body>
+</html>

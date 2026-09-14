@@ -87,9 +87,7 @@ $(function () {
         $navLinks.removeClass("active");
 
         $navLinks
-          .filter(
-            `[href="#${$section.attr("id")}"]`
-          )
+          .filter(`[href="#${$section.attr("id")}"]`)
           .addClass("active");
 
         return false;
@@ -196,7 +194,7 @@ $(function () {
             duration: 0.16,
             ease: "power1.out"
           },
-          0.055
+          0.025
         );
       }
 
@@ -221,7 +219,7 @@ $(function () {
             duration: 0.38,
             ease: "power2.out"
           },
-          0.14
+          0.06
         );
 
         tl.to(
@@ -261,7 +259,7 @@ $(function () {
             duration: 0.28,
             ease: "power2.out"
           },
-          0.07
+          0.025
         );
 
         tl.to(
@@ -276,7 +274,7 @@ $(function () {
             duration: 0.38,
             ease: "sine.inOut"
           },
-          0.28
+          0.20
         );
 
         tl.to(
@@ -308,7 +306,7 @@ $(function () {
             duration: 0.24,
             ease: "power2.out"
           },
-          0.14
+          0.06
         );
       }
 
@@ -327,7 +325,7 @@ $(function () {
             duration: 0.38,
             ease: "power2.out"
           },
-          0.17
+          0.09
         );
       }
 
@@ -344,7 +342,7 @@ $(function () {
             duration: 0.32,
             ease: "power2.out"
           },
-          0.30
+          0.18
         );
       }
 
@@ -361,7 +359,7 @@ $(function () {
             duration: 0.30,
             ease: "power2.out"
           },
-          0.38
+          0.26
         );
       }
 
@@ -376,7 +374,7 @@ $(function () {
             duration: 0.18,
             ease: "none"
           },
-          0.16
+          0.08
         );
       }
 
@@ -431,7 +429,7 @@ $(function () {
             duration: 0.44,
             ease: "sine.inOut"
           },
-          0.18
+          0.10
         );
 
         tl.to(
@@ -463,7 +461,7 @@ $(function () {
             duration: 0.52,
             ease: "power1.in"
           },
-          0.21
+          0.12
         );
       }
     }
@@ -491,7 +489,7 @@ $(function () {
             duration: 0.26,
             ease: "back.out(1.8)"
           },
-          0.22
+          0.12
         );
 
         tl.to(
@@ -556,7 +554,7 @@ $(function () {
             duration: 0.34,
             ease: "power2.out"
           },
-          0.31 + i * 0.018
+          0.18 + i * 0.018
         );
 
         tl.to(
@@ -599,7 +597,7 @@ $(function () {
             duration: 0.42,
             ease: "back.out(1.55)"
           },
-          0.2
+          0.10
         );
 
         tl.to(
@@ -638,7 +636,7 @@ $(function () {
             duration: 0.38,
             ease: "power2.out"
           },
-          0.26
+          0.14
         );
 
         tl.to(

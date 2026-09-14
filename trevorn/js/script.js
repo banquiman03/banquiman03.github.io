@@ -10,7 +10,7 @@ $(function () {
   const $scrollTopControl = $(".scroll-top-control");
 
   const $siteLoader = $("#siteLoader");
-  const loaderDuration = 5000;
+  const loaderDuration = 3500;
 
   if ($siteLoader.length) {
     setTimeout(function () {
@@ -716,18 +716,36 @@ $(function () {
   const headerScrollThreshold = 8;
 
   function updateHeaderVisibility() {
-    const currentScrollTop = Math.max(0, $window.scrollTop());
-    const scrollDelta = currentScrollTop - lastScrollTop;
+    const currentScrollTop = Math.max(
+      0,
+      $window.scrollTop()
+    );
 
-    if (currentScrollTop <= 12 || $mainNav.hasClass("open")) {
+    const scrollDelta =
+      currentScrollTop - lastScrollTop;
+
+    if (
+      currentScrollTop <= 12 ||
+      $mainNav.hasClass("open")
+    ) {
       $header.removeClass("is-hidden");
-    } else if (scrollDelta > headerScrollThreshold) {
+      $("body").removeClass("header-is-hidden");
+    } else if (
+      scrollDelta > headerScrollThreshold
+    ) {
       $header.addClass("is-hidden");
-    } else if (scrollDelta < -headerScrollThreshold) {
+      $("body").addClass("header-is-hidden");
+    } else if (
+      scrollDelta < -headerScrollThreshold
+    ) {
       $header.removeClass("is-hidden");
+      $("body").removeClass("header-is-hidden");
     }
 
-    if (Math.abs(scrollDelta) > headerScrollThreshold) {
+    if (
+      Math.abs(scrollDelta) >
+      headerScrollThreshold
+    ) {
       lastScrollTop = currentScrollTop;
     }
   }

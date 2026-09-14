@@ -39,6 +39,11 @@ a { text-decoration: none; }
   transform: translateY(-100%);
 }
 
+body.header-is-hidden .product-sticky {
+  top: 0;
+  height: 100vh;
+}
+
 .header-shell {
   height: 100%;
   display: flex;
@@ -330,7 +335,7 @@ a { text-decoration: none; }
   background: var(--brand-red);
 }
 
-.hero-progress-fill.run { animation: progressRun 15s linear forwards; }
+.hero-progress-fill.run { animation: progressRun 10s linear forwards; }
 
 @keyframes progressRun {
   from { width: 0; }
@@ -1708,7 +1713,7 @@ body.is-loading {
   width: 0;
   background: var(--brand-red);
   box-shadow: 0 0 18px rgba(210,25,25,.65);
-  animation: loaderProgress 5s linear forwards;
+  animation: loaderProgress 3.5s linear forwards;
 }
 
 .site-loader__track::after {

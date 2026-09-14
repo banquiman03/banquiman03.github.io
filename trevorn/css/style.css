@@ -30,6 +30,13 @@ a { text-decoration: none; }
   background: #000;
   z-index: 1050;
   border-bottom: 1px solid rgba(160, 8, 8, .28);
+  transform: translateY(0);
+  transition: transform .32s cubic-bezier(.4, 0, .2, 1);
+  will-change: transform;
+}
+
+.site-header.is-hidden {
+  transform: translateY(-100%);
 }
 
 .header-shell {
@@ -1780,7 +1787,10 @@ body.is-loading {
       height: 100vh;
     }
 
-    .product-showcase--chocolate .product-gradient,
+    .product-showcase--chocolate .product-gradient {
+      top: 0;
+    }
+
     .product-showcase--chocolate .product-layer,
     .product-showcase--chocolate .product-content {
       top: var(--header-h);

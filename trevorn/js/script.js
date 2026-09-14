@@ -712,6 +712,26 @@ $(function () {
     );
   }
 
+  let lastScrollTop = $window.scrollTop();
+  const headerScrollThreshold = 8;
+
+  function updateHeaderVisibility() {
+    const currentScrollTop = Math.max(0, $window.scrollTop());
+    const scrollDelta = currentScrollTop - lastScrollTop;
+
+    if (currentScrollTop <= 12 || $mainNav.hasClass("open")) {
+      $header.removeClass("is-hidden");
+    } else if (scrollDelta > headerScrollThreshold) {
+      $header.addClass("is-hidden");
+    } else if (scrollDelta < -headerScrollThreshold) {
+      $header.removeClass("is-hidden");
+    }
+
+    if (Math.abs(scrollDelta) > headerScrollThreshold) {
+      lastScrollTop = currentScrollTop;
+    }
+  }
+
   $scrollTopControl.on(
     "click",
     function (event) {
@@ -727,11 +747,13 @@ $(function () {
     function () {
       updateActiveNav();
       updateScrollTopControl();
+      updateHeaderVisibility();
     }
   );
 
   updateActiveNav();
   updateScrollTopControl();
+  updateHeaderVisibility();
 
   let resizeTimer;
 

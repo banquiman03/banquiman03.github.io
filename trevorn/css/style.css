@@ -1478,7 +1478,7 @@ body.header-is-hidden .product-sticky {
 .product-scroll-cue {
   position: absolute;
   z-index: 18;
-  top: clamp(38px, 6.5vh, 74px);
+  top: 28px;
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -1829,7 +1829,7 @@ body.is-loading {
     }
 
   .product-showcase--chocolate .product-scroll-cue {
-      top: clamp(38px, 6.5vh, 74px);
+      top: 28px;
     }
 
   .main-nav {
@@ -2040,11 +2040,11 @@ body.is-loading {
     }
 
     .product-order-cta {
-      margin-top: 18px;
+      margin-top: 24px;
     }
 
     .product-scroll-cue {
-      top: 18px;
+      top: 24px;
     }
 
   .product-layer--base {
@@ -2090,7 +2090,7 @@ body.is-loading {
       height: auto;
     }
     .product-showcase--chocolate .product-scroll-cue {
-      top: 18px;
+      top: 24px;
     }
 }
 
@@ -2454,7 +2454,7 @@ body.is-loading {
     }
 
     .product-description {
-      margin-top: 12px;
+      margin-top: 20px;
       font-size: 14px;
       line-height: 1.5;
     }
@@ -2468,7 +2468,7 @@ body.is-loading {
     }
 
     .product-scroll-cue {
-      top: 12px;
+      top: 20px;
     }
 
   .product-layer--base {
@@ -2513,7 +2513,7 @@ body.is-loading {
     }
 
   .product-showcase--chocolate .product-scroll-cue {
-      top: 12px;
+      top: 20px;
     }
 
   .product-scroll-cue {

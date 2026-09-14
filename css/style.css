@@ -3455,11 +3455,11 @@ h6 {
 .portfolio-project-badge {
   position: absolute;
   top: -9px;
-  right: -9px;
+  left: -9px;
   z-index: 4;
   padding: 5px 10px;
-  background-color: #666666;
-  border: 1px solid #7A7A7A;
+  background-color: rgba(102, 102, 102, 0.72);
+  border: 1px solid #FFFFFF;
   border-radius: 999px;
   color: #FFFFFF;
   font-family: var(--body-font);

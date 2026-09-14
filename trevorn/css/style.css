@@ -522,7 +522,13 @@ body.header-is-hidden .product-sticky {
 
 .melt-drip--1 { left: 18%; }
 .melt-drip--2 { left: 54%; height: clamp(150px, 24vh, 330px); }
-.melt-drip--3 { right: 13%; height: clamp(210px, 34vh, 440px); }
+/* Extend the top-right chocolate drip above the viewport so its animated
+   downward travel never exposes a visibly cut starting edge. */
+.melt-drip--3 {
+  right: 13%;
+  top: -34vh;
+  height: clamp(360px, 58vh, 720px);
+}
 
 .behavior-effect--crunch {
   color: #5f4923;
@@ -688,6 +694,18 @@ body.header-is-hidden .product-sticky {
 
 .product-showcase {
   background: transparent;
+}
+
+.product-showcase--chocolate {
+  background: #352620;
+}
+
+.product-showcase--vanilla {
+  background: #F3E5AB;
+}
+
+.product-showcase--avocado {
+  background: #2b7208;
 }
 
 .product-showcase .product-sticky {

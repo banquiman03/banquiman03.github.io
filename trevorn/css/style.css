@@ -584,17 +584,17 @@ body.header-is-hidden .product-sticky {
 /* Vanilla Wafer bubble composition: one dominant bottom-right bubble,
    then smaller bubbles trailing upward and inward from that anchor. */
 .product-showcase--vanilla .bite--1 {
-  width: clamp(280px, 29vw, 560px);
-  right: -7%;
-  bottom: -14%;
+  width: clamp(250px, 25vw, 490px);
+  right: -9%;
+  bottom: -15%;
   top: auto;
 }
 
 /* Bottom-right -> center-right trail */
 .product-showcase--vanilla .bite--2 {
-  width: clamp(170px, 17vw, 330px);
-  right: -1%;
-  bottom: 27%;
+  width: clamp(150px, 14.5vw, 285px);
+  right: -3%;
+  bottom: 26%;
   top: auto;
 }
 
@@ -614,9 +614,9 @@ body.header-is-hidden .product-sticky {
 
 /* Bottom-right -> bottom-center trail */
 .product-showcase--vanilla .bite--5 {
-  width: clamp(160px, 16vw, 310px);
-  right: 24%;
-  bottom: -7%;
+  width: clamp(145px, 14vw, 270px);
+  right: 25%;
+  bottom: -8%;
   top: auto;
 }
 
@@ -2357,15 +2357,15 @@ body.is-loading {
     .melt-blob--3 { left: 36%; }
 
     .product-showcase--vanilla .bite--1 {
-      width: clamp(210px, 58vw, 320px);
-      right: -21%;
-      bottom: -8%;
+      width: clamp(190px, 52vw, 285px);
+      right: -23%;
+      bottom: -9%;
     }
 
     .product-showcase--vanilla .bite--2 {
-      width: clamp(120px, 34vw, 190px);
-      right: -10%;
-      bottom: 29%;
+      width: clamp(108px, 30vw, 170px);
+      right: -12%;
+      bottom: 28%;
     }
 
     .product-showcase--vanilla .bite--3 {
@@ -2381,9 +2381,9 @@ body.is-loading {
     }
 
     .product-showcase--vanilla .bite--5 {
-      width: clamp(118px, 33vw, 185px);
-      right: 24%;
-      bottom: -4%;
+      width: clamp(106px, 29vw, 165px);
+      right: 25%;
+      bottom: -5%;
     }
 
     .product-showcase--vanilla .bite--6 {
